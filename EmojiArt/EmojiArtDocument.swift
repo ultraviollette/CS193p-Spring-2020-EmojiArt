@@ -13,13 +13,13 @@ class EmojiArtDocument: ObservableObject, Hashable, Identifiable {
         lhs.id == rhs.id
     }
     
-    let id = UUID
+    let id: UUID
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
     
-    static var palette: String = "⭐️⛈🍎🌏🥨⚾️"
+    static let palette: String = "⭐️⛈🍎🌏🥨⚾️"
     
     @Published private var emojiArt: EmojiArt
     
